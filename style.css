@@ -1,0 +1,68 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    background-color: rgb(27, 27, 27);
+    height: 100vh;
+}
+#ano {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 2px;
+}
+
+.periodo {
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    width: 130px;
+    padding: 4px;
+}
+
+.materia {
+    color: rgb(37, 37, 37);
+    font-weight: bold;
+    background-color: rgb(223, 223, 223);
+    border-radius: 10px;
+    height: 70px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    text-transform: lowercase;
+    user-select: none;
+}
+
+
+
+.materia.secondary-req {
+    background-color: rgb(159, 166, 255);
+}
+
+.materia.primary-req {
+    background-color: rgb(48, 45, 248);
+}
+
+.materia.secondary-pre {
+    background-color: rgb(255, 143, 143);
+}
+
+.materia.primary-pre {
+    background-color: rgb(255, 40, 40);
+}
+
+.materia.selected {
+    background-color: rgb(60, 255, 93);
+}
