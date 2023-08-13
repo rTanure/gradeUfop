@@ -1,0 +1,17 @@
+.period {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.period > div{
+    width: 100%;
+}
+
+.period > span {
+    color: white;
+    font-weight: bold;
+}

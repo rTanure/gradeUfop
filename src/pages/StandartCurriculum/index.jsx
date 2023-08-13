@@ -1,9 +1,9 @@
-import Header from './components/Header'
-import Grade from './components/Grade'
-import Footer from './components/Footer';
+import Header from '../../components/Header'
+import Grade from '../../components/Grade'
+import Footer from '../../components/Footer';
 import { useState } from 'react'
 
-function App() {
+export default function StandartCurriculum() {
   const [ courseId, setCourseId] = useState(1);
 
   return (
@@ -14,5 +14,3 @@ function App() {
     </>
   )
 }
-
-export default App
