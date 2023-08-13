@@ -9,13 +9,14 @@ export default function calcInteractions(data, id) {
     let start = new Date().getTime()
     let primaryPre = calcPrimaryPre(data, id)
     let endPrimaryPre = new Date().getTime()
-    let secondaryPre = calcSecondaryPre(data, primaryPre)
+    let secondaryPre = calcSecondaryPre(data, id)
     let endSecondaryPre = new Date().getTime()
 
     let primaryReq = calcPrimaryReq(data, id)
     let endPrimaryReq = new Date().getTime()
     let secondaryReq = calcSecondaryReq(data, primaryReq)
     let endSecondaryReq = new Date().getTime()
+
 
     const newInteractions = {
         "primary_req": primaryReq,
@@ -43,6 +44,15 @@ function searchById(data, id) {
     return null;
 }
 
+function calcPrimaryReq(data, id) {
+    let result = searchById(data, id)
+    if(result != null) {
+        return result.requisitos
+    } else {
+        return null
+    }
+}
+
 function calcSecondaryReq(data, primaryReq) {
     let secondaryReq = new Set();
     for(let primarySubject of primaryReq) {
@@ -57,26 +67,19 @@ function calcSecondaryReq(data, primaryReq) {
     return secondaryReq;
 }
 
-function calcPrimaryReq(data, id) {
-    let result = searchById(data, id)
-    if(result != null) {
-        return result.requisitos
-    } else {
-        return null
-    }
-}
-// Causando lentidão \/
-function calcSecondaryPre(data, primaryPre) {
-    let secondaryPre = new Set();
+function calcSecondaryPre(data, id) {
+    const secondaryPre = new Set()
 
-    for(let primarySubject of primaryPre) {
-        let temporaryList = calcPrimaryPre(data, primarySubject);
-        for(let secondarySubject of temporaryList) {
-            secondaryPre.add(secondarySubject)
-            for(let temp of calcSecondaryPre(data, secondaryPre)) {
-                secondaryPre.add(temp)
+
+    for(let period of data) {
+        for(let subject of period) {
+            let primaryReq = calcPrimaryReq(data, subject.id)
+            let secondaryReq = calcSecondaryReq(data, primaryReq)
+            for(let secondaryReqSubject of secondaryReq) {
+                if(secondaryReqSubject === id) {
+                    secondaryPre.add(subject.id)
+                }
             }
-            
         }
     }
     return secondaryPre

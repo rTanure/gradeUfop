@@ -39,7 +39,6 @@ export default function Grade({states}) {
             default:
                 setAtualData(data.sistemas_de_informacao)
         }
-        console.log(courseId)
     }, [states])
 
     useEffect(()=>{
