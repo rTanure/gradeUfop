@@ -1,7 +1,14 @@
+.grade-container {
+    max-width: 100vw;
+    overflow-x: auto;
+}
+
 .grade {
-    min-height: calc(100vh - 162px);
+
+    width: min-content;
+    min-height: calc(100vh - 142px);
     padding: 20px;
+    margin: 70px auto;
     display: flex;
     gap: 15px;
-    justify-content: center;
 }

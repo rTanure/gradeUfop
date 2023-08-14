@@ -48,15 +48,19 @@ export default function Grade({states}) {
     
 
     return (
-        <section className="grade">
-            {atualData.map((obj, index) =>{
-                return (
-                    <div key={index}>
-                        <Period data={obj} index={index} selectedSubjectState={[ selectedSubject, setSelectedSubject ]} interactions={subjectInteractions}/>
-                    </div>
-                    
-                )
-            })}
+        <section className="grade-container">
+            <div className="grade">
+            
+                {atualData.map((obj, index) =>{
+                    return (
+                        <div key={index}>
+                            <Period data={obj} index={index} selectedSubjectState={[ selectedSubject, setSelectedSubject ]} interactions={subjectInteractions}/>
+                        </div>
+                        
+                    )
+                })}
+            </div>
         </section>
+        
     )
 }

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./style.css"
 
 export default function Subject(data) {
@@ -12,13 +11,10 @@ export default function Subject(data) {
     let dinamicClass = ""
 
     dinamicClass += (data.code === selectedSubject) ? " selected " : ""
-    if(interactions.secondary_req != null) {
-        for(let primary_req of interactions.primary_req) { dinamicClass += (data.code === primary_req) ? " primary_req " : "" }
-        for(let secondary_req of interactions.secondary_req) {dinamicClass += (data.code === secondary_req) ? " secondary_req " : ""}
-        for(let primary_pre of interactions.primary_pre) { dinamicClass += (data.code === primary_pre) ? " primary_pre " : "" }
-        for(let secondary_pre of interactions.secondary_pre) {dinamicClass += (data.code === secondary_pre) ? " secondary_pre " : ""}
-
-    }
+    for(let primary_req of interactions.primary_req) { dinamicClass += (data.code === primary_req) ? " primary_req " : "" }
+    for(let secondary_req of interactions.secondary_req) {dinamicClass += (data.code === secondary_req) ? " secondary_req " : ""}
+    for(let primary_pre of interactions.primary_pre) { dinamicClass += (data.code === primary_pre) ? " primary_pre " : "" }
+    for(let secondary_pre of interactions.secondary_pre) {dinamicClass += (data.code === secondary_pre) ? " secondary_pre " : ""}
     
     return (
         <div className={"subject " + dinamicClass} onClick={(e) => selectSubject(data.code)}>
