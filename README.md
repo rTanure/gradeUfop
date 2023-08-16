@@ -1,8 +1,20 @@
-# React + Vite
+# Grade UFOP
+Aplicação desenvolvida em React com o intuito de facilitar a visualização de dependência entre as disciplinas dos cursos de Eng. Da Computação, Sistemas de Informação, Eng. Elétrica e Eng. de Produção.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Como utilizar:
+- Acessar o projeto em: https://grade-ufop.vercel.app/
+- Clicar na disciplina desejada e visualizar a dependência entre elas
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tipos de dependência:
+- <b>Requisito primário:  </b>
+  - Disciplinas necessárias cursar a selecionada.
+  - Cor: VERDE
+- <b>Requisito secundário: </b>
+  - Disciplinas necessárias cursar os requisitos primários da selecionada.
+  - Cor: CIANO
+- <b>continuação primaria:  </b>
+  - Disciplinas que tem como requisito primário a selecionada.
+  - Cor: VERMELHO
+- <b>continuação secundaria: </b>
+  - Disciplinas que tem como requisito primário as que tem como requisito a selecionada.
+  - Cor: ROSA
