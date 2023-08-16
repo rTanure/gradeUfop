@@ -1,0 +1,17 @@
+:root {
+    --gray:rgb(34, 34, 34);
+    --light-gray:rgb(202, 202, 202);
+    --red: #962038;
+    --background-page: #6e6e6e;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background-page);
+}
