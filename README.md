@@ -2,7 +2,7 @@
 Aplicação desenvolvida em React com o intuito de facilitar a visualização de dependência entre as disciplinas dos cursos de Eng. Da Computação, Sistemas de Informação, Eng. Elétrica e Eng. de Produção.
 
 ## Como utilizar:
-- Acessar o projeto em: https://grade-ufop.vercel.app/
+- Acessar o projeto em: https://gradeufop.richardytanure.com/
 - Clicar na disciplina desejada e visualizar a dependência entre elas
 
 ## Tipos de dependência:
