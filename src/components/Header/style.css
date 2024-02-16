@@ -16,12 +16,29 @@ header .content {
 
 header select{
     padding: 1px 8px;
-    border-radius: 100px;
+    border-radius: 0;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 4px 18px;
     outline: 0;
     cursor: pointer;
     font-weight: bold;
-    color: var(--gray);
+    /* color: var(--gray); */
     font-size: 14px;
+}
+
+header option {
+    background-color: black;
+    border-radius: 0;
+}
+
+header option:hover {
+    background-color: rgb(58, 58, 58);
+}
+
+header option:checked {
+    background-color: rgb(43, 43, 43);
 }
 
 h1 {
@@ -50,11 +67,11 @@ h1 span{
 
     header select{
         padding: 2px 5px;
-        border-radius: 100px;
+        /* border-radius: 100px; */
         outline: 0;
         cursor: pointer;
         font-weight: bold;
-        color: var(--gray);
+        /* color: var(--gray); */
         font-size: 12px;
     }
   }

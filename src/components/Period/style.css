@@ -2,9 +2,10 @@
     width: 120px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0;
     align-items: center;
     cursor: pointer;
+    margin: 0 2px;
 }
 
 .period > div{

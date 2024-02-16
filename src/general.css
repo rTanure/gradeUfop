@@ -1,8 +1,8 @@
 :root {
-    --gray:rgb(34, 34, 34);
+    --gray:rgb(0, 0, 0);
     --light-gray:rgb(202, 202, 202);
     --red: #962038;
-    --background-page: #6e6e6e;
+    --background-page: #1d1d1d;
 }
 
 * {
@@ -10,6 +10,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-collapse: collapse;
 }
 
 body {

@@ -24,12 +24,12 @@ export default function calcInteractions(data, id) {
         "primary_pre": primaryPre,
         "secondary_pre": secondaryPre
     }
-    console.log("==============")
-    console.log("> Tempo total:        ", endSecondaryReq - start, "ms")
-    console.log("> Tempo primaryPre:   ", endPrimaryPre - start, "ms")
-    console.log("> Tempo secondaryPre: ", endSecondaryPre - endPrimaryPre, "ms")
-    console.log("> Tempo primaryReq:   ", endPrimaryReq - endSecondaryPre, "ms")
-    console.log("> Tempo secondaryReq: ", endSecondaryReq - endPrimaryReq, "ms")
+    // console.log("==============")
+    // console.log("> Tempo total:        ", endSecondaryReq - start, "ms")
+    // console.log("> Tempo primaryPre:   ", endPrimaryPre - start, "ms")
+    // console.log("> Tempo secondaryPre: ", endSecondaryPre - endPrimaryPre, "ms")
+    // console.log("> Tempo primaryReq:   ", endPrimaryReq - endSecondaryPre, "ms")
+    // console.log("> Tempo secondaryReq: ", endSecondaryReq - endPrimaryReq, "ms")
     return newInteractions
 }
 
